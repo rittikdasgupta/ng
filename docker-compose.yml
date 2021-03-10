@@ -1,0 +1,15 @@
+
+services:
+    backend:
+        build: ./Backend
+        container_name: backend
+        restart: always
+        expose: 
+            - 8000
+    
+    frontend:
+        build: ./Frontend
+        container_name: frontend
+        restart: always
+        ports:
+            - "5698:5698"
